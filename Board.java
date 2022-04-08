@@ -88,7 +88,7 @@ public class Board {
     public static boolean check_neg_d(int t, int c, int r){
         int count = 0;
         int j = Math.max(0, r-3); 
-        for(int i = Math.max(0, c-3) ; i < Math.min(Board.length, c+3); i++){
+        for(int i = Math.max(0, c-3) ; i <+ Math.min(Board.length - 1, c+3); i++){
             if(j >= Board[0].length){
                 break;
             }
@@ -109,7 +109,7 @@ public class Board {
     public static boolean check_pos_d(int t, int c, int r){
         int count = 0;
         int j = Math.min(r+3, Board[0].length-1); 
-        for(int i = Math.max(0, c-3) ; i < Math.min(Board.length, c+3); i++){
+        for(int i = Math.max(0, c-3) ; i <= Math.min(Board.length - 1, c+3); i++){
             if(j < 0){
                 break;
             }

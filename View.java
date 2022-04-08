@@ -3,8 +3,8 @@ public class View {
 
 
     public static void display(int[][] Board){
-        for(int i = Board.length - 1 ; i >= 0 ; i--){
-            for(int j = Board[0].length - 1 ; j >= 0 ; j--){
+        for(int j = 0 ; j < Board[0].length ; j++){
+            for(int i = 0 ; i < Board.length; i++){
                 int t = Board[i][j];
                 if(t == 0){
                     System.out.print(" | " + Integer.toString(t) + " | ");
